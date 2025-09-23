@@ -60,9 +60,12 @@ const CoffeeCard = ({ coffee }) => {
               <IoMdEye />
             </button>
           </Link>
-          <button className="btn text-xl px-2 bg-[#3C393B] text-white rounded-lg">
-            <HiPencil />
-          </button>
+
+          <Link to={`/update-coffee/${_id}`}>
+            <button className="btn text-xl px-2 bg-[#3C393B] text-white rounded-lg">
+              <HiPencil />
+            </button>
+          </Link>
           <button
             onClick={() => handleDelete(_id)}
             className="btn text-2xl px-2 bg-[#EA4744] text-white rounded-lg"
