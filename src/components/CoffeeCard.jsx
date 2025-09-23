@@ -2,6 +2,7 @@ import { IoMdEye } from "react-icons/io";
 import { HiPencil } from "react-icons/hi2";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
+import { Link } from "react-router";
 
 const CoffeeCard = ({ coffee }) => {
   const { _id, name, price, quantity, photo } = coffee;
@@ -54,9 +55,11 @@ const CoffeeCard = ({ coffee }) => {
           </p>
         </div>
         <div className="flex flex-col space-y-3">
-          <button className="btn text-2xl px-2 bg-[#D2B48C] text-white rounded-lg">
-            <IoMdEye />
-          </button>
+          <Link to={`/coffee-details/${_id}`}>
+            <button className="btn text-2xl px-2 bg-[#D2B48C] text-white rounded-lg">
+              <IoMdEye />
+            </button>
+          </Link>
           <button className="btn text-xl px-2 bg-[#3C393B] text-white rounded-lg">
             <HiPencil />
           </button>
