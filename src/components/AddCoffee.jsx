@@ -1,4 +1,6 @@
 import Swal from "sweetalert2";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { Link } from "react-router";
 
 const AddCoffee = () => {
 
@@ -29,6 +31,9 @@ const AddCoffee = () => {
         })
     }
   return (
+    <>
+    <Link className="rancho-font flex items-center text-xl font-bold gap-3 my-7" to='/'><FaArrowLeftLong /> Back To Home</Link>
+    
     <div className='bg-[#F4F3F0] p-20'>
         <div className='mb-10 max-w-3xl mx-auto space-y-5 text-center'>
            <h1 className='rancho-font text-4xl  font-semibold'>Add New Coffee</h1>
@@ -68,6 +73,7 @@ const AddCoffee = () => {
                 <input type="submit" className='btn rancho-font w-full mt-5 bg-[#D2B48C] text-[#331A15] text-xl border-2 border-[#331A15]' value='Add Coffee' />
         </form>
     </div>
+    </>
   )
 }
 
