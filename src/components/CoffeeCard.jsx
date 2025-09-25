@@ -64,7 +64,7 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
           </Link>
 
           <Link to={`/update-coffee/${_id}`}>
-            <button className="btn text-xl px-2 bg-[#3C393B] text-white rounded-lg">
+            <button className="btn text-2xl px-2 bg-[#3C393B] text-white rounded-lg">
               <HiPencil />
             </button>
           </Link>
