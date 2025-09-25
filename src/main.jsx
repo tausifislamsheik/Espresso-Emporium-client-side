@@ -12,6 +12,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import AuthProvider from './Auth/AuthProvider';
 import UsersProfile from './components/UsersProfile';
+import UpdateUser from './components/UpdateUser';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
         path:'/users-profile',
         loader:() => fetch('http://localhost:3000/users-profile'),
         Component:UsersProfile
+      },
+      {
+        path:'/update-user/:id',
+        loader:({params}) => fetch(`http://localhost:3000/users-profile/${params.id}`),
+        Component:UpdateUser
       }
     ]
   },

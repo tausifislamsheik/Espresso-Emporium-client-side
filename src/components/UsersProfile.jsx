@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 
 const UsersProfile = () => {
   const initialUserData = useLoaderData();
-  console.log(initialUserData);
   const [users, setUsers] = useState(initialUserData);
 
   const handleDelete = (id) => {
@@ -84,8 +83,7 @@ const UsersProfile = () => {
                       <IoMdEye />
                     </button>
                   </Link>
-
-                  <Link>
+                  <Link to={`/update-user/${user._id}`}>
                     <button className="btn text-xl px-2 bg-[#3C393B] text-white rounded-lg">
                       <HiPencil />
                     </button>

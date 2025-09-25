@@ -17,6 +17,7 @@ const SignIn = () => {
         signInUser(email, password)
         .then(result =>{
             console.log(result.user)
+            e.target.reset();
             const signInUser = {
                 email,
                 lastSignInTime:result.user?.metadata?.lastSignInTime
