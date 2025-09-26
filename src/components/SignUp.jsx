@@ -6,7 +6,6 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 
 const SignUp = () => {
   const { createUser } = use(AuthContext);
-  console.log(createUser);
 
   const handleSignUp = (e) => {
     e.preventDefault();
