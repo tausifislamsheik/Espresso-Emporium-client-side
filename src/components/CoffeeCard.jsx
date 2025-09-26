@@ -38,7 +38,7 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
     });
   };
   return (
-    <div className="card card-side bg-[#F5F4F1] shadow-sm p-7">
+    <div className="card card-side shadow-sm p-7 bg-white/20 backdrop-blur-sm">
       <figure>
         <img className="w-42 h-46" src={photo} alt="Coffee" />
       </figure>
