@@ -6,7 +6,7 @@ const CoffeeDetails = () => {
     const {photo, name, quantity, details, category, price} = coffeeDetail; 
   return (
     <>
-    <Link className="rancho-font ml-20 flex items-center text-xl font-bold gap-3" to='/'><FaArrowLeftLong /> Back To Home</Link>
+    <Link className="rancho-font ml-20 flex items-center text-xl font-bold mt-10 gap-3" to='/'><FaArrowLeftLong /> Back To Home</Link>
     <div className="card card-side max-w-2xl mx-auto justify-around p-10 shadow-sm my-20 bg-[#F4F3F0]">
       <figure>
         <img
