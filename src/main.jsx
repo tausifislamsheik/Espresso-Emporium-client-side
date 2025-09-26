@@ -13,11 +13,13 @@ import SignUp from './components/SignUp';
 import AuthProvider from './Auth/AuthProvider';
 import UsersProfile from './components/UsersProfile';
 import UpdateUser from './components/UpdateUser';
+import ErrorPage from './components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component:MainLayout,
+    errorElement:<ErrorPage />,
     children:[
       {
         index:true,
