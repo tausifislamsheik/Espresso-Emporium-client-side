@@ -1,13 +1,13 @@
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { Outlet } from 'react-router'
 
 const MainLayout = () => {
   return (
     <div>
-        <div className='max-w-7xl mx-auto'>
-            <Header></Header>
-            <Outlet></Outlet>
-        </div>
+        <Header></Header>
+        <Outlet></Outlet>
+        <Footer></Footer>
     </div>
   )
 }

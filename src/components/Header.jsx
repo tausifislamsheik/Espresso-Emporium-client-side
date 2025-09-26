@@ -4,9 +4,9 @@ import { Link } from 'react-router'
 
 const Header = () => {
   return (
-    <div className='relative mt-10'>
+    <div className='relative'>
         <div className='w-full'>
-          <img className='h-16 md:h-20 w-full rounded-t-xl' src={navBgImg} alt="" />
+          <img className='h-16 md:h-20 w-full' src={navBgImg} alt="" />
         </div>
         <div className='flex justify-evenly md:justify-around pt-4 -mt-20'>
           <div className='mr-30'></div>

@@ -33,10 +33,10 @@ const UpdateCoffee = () => {
       });
   };
   return (
-    <>
+    <div className="max-w-7xl mx-auto">
     <Link className="rancho-font flex items-center text-xl font-bold gap-3 my-7" to='/'><FaArrowLeftLong /> Back To Home</Link>
     
-    <div className="bg-[#F4F3F0] p-20">
+    <div className="bg-[#F4F3F0] p-20 mb-20">
       <div className="mb-10 max-w-3xl mx-auto space-y-5 text-center">
         <h1 className="rancho-font text-4xl  font-semibold">
           Update Existing Coffee Details
@@ -130,7 +130,7 @@ const UpdateCoffee = () => {
         />
       </form>
     </div>
-    </>
+    </div>
   );
 };
 
