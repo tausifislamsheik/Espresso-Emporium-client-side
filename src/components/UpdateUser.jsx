@@ -36,13 +36,13 @@ const UpdateUser = () => {
   return (
     <>
       <Link
-        className="rancho-font flex items-center text-xl font-bold gap-3 my-7"
+        className="rancho-font flex items-center text-xl font-bold gap-3 my-7 md:ml-20"
         to="/users-profile"
       >
         <FaArrowLeftLong /> Back To Profile
       </Link>
 
-      <div className="card bg-[#F4F3F0] max-w-lg mx-auto my-26 shrink-0">
+      <div className="card bg-[#F4F3F0] max-w-lg mx-auto my-14 shrink-0">
         <div className="card-body">
           <h1 className="text-center my-5 text-3xl font-bold text-[#331A15] rancho-font">
             Update Your Profile
