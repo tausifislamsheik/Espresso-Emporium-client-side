@@ -33,15 +33,15 @@ const UpdateCoffee = () => {
       });
   };
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="md:max-w-7xl md:mx-auto mx-6">
     <Link className="rancho-font flex items-center text-xl font-bold gap-3 my-7" to='/'><FaArrowLeftLong /> Back To Home</Link>
     
-    <div className="bg-[#F4F3F0] p-20 mb-20">
+    <div className="bg-[#F4F3F0] p-5 md:p-20 mb-20">
       <div className="mb-10 max-w-3xl mx-auto space-y-5 text-center">
-        <h1 className="rancho-font text-4xl  font-semibold">
+        <h1 className="rancho-font text-2xl md:text-4xl  font-semibold">
           Update Existing Coffee Details
         </h1>
-        <p className="text-[#1A1A1ACC]">
+        <p className="text-[#1A1A1ACC] text-sm">
           It is a long established fact that a reader will be distraceted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less normal distribution of
