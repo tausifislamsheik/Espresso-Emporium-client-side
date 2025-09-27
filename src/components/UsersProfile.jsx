@@ -21,7 +21,7 @@ const UsersProfile = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/users-profile/${id}`, {
+        fetch(`https://espresso-emporium-server-side-ten.vercel.app/users-profile/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

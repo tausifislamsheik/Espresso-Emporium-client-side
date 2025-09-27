@@ -33,7 +33,7 @@ const SignUp = () => {
           lastSignInTime: result.user?.metadata?.lastSignInTime,
         };
 
-        fetch("http://localhost:3000/users-profile", {
+        fetch("https://espresso-emporium-server-side-ten.vercel.app/users-profile", {
           method: "POST",
           headers: {
             "content-type": "application/json",
