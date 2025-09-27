@@ -33,7 +33,7 @@ const SignUp = () => {
           lastSignInTime: result.user?.metadata?.lastSignInTime,
         };
 
-        fetch("https://espresso-emporium-server-side-ten.vercel.app/users-profile", {
+        fetch("https://espresso-emporium-server-side-i25n.vercel.app/users-profile", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -57,7 +57,7 @@ const SignUp = () => {
         <FaArrowLeftLong /> Back To Home
       </Link>
 
-      <div className="card bg-[#F4F3F0] max-w-lg mx-auto my-10 shrink-0">
+      <div className="card bg-[#F4F3F0] md:max-w-lg md:mx-auto mx-6 my-10 shrink-0">
         <div className="card-body">
           <h1 className="text-center my-5 text-3xl font-bold text-[#331A15] rancho-font">
             Sign Up Your Account

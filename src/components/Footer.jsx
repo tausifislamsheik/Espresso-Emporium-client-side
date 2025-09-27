@@ -11,8 +11,8 @@ const Footer = () => {
           </h1>
         </div>
         <p>
-          Always ready to be your friend. Come & Contact with us to <br /> share your
-          memorable moments, to share with your best companion.
+          Always ready to be your friend. Come & Contact with us to <br /> share
+          your memorable moments, to share with your best companion.
         </p>
         <div className="grid grid-flow-col gap-4">
           <a>
@@ -60,16 +60,32 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="card-body">
-        <h1 className="text-xl md:text-3xl rancho-font font-bold">Connect With Us</h1>
-        <div className="card-body w-96">
-                    <form className="space-y-4">
-                      <input type="text" className="input border-none w-full" placeholder="Name" />
-                      <input type="email" className="input border-none w-full" placeholder="Email" />
-                      <input type="text" className="input border-none w-full" placeholder="Message" />
-                      <button className="btn rancho-font w-full mt-5 bg-[#D2B48C] text-[#331A15] text-xl">Send Message</button>
-                    </form>
-                  </div>
+      <div className="">
+        <h1 className="text-xl md:text-3xl rancho-font font-bold">
+          Connect With Us
+        </h1>
+        <div className="card-body w-80">
+          <form className="space-y-4">
+            <input
+              type="text"
+              className="input border-none w-full"
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              className="input border-none w-full"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              className="input border-none w-full"
+              placeholder="Message"
+            />
+            <button className="btn rancho-font w-full mt-5 bg-[#D2B48C] text-[#331A15] text-xl">
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
   );

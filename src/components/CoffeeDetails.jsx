@@ -7,10 +7,10 @@ const CoffeeDetails = () => {
   return (
     <>
     <Link className="rancho-font ml-20 flex items-center text-xl font-bold mt-10 gap-3" to='/'><FaArrowLeftLong /> Back To Home</Link>
-    <div className="card card-side max-w-2xl mx-auto justify-around p-10 shadow-sm my-20 bg-[#F4F3F0]">
+    <div className="card card-side md:max-w-2xl md:mx-auto mx-6 justify-around p-10 shadow-sm my-20 bg-[#F4F3F0] flex-col">
       <figure>
         <img
-        className="w-60"
+        className="w-40 md:w-60"
           src={photo}
           alt="Coffee"
         />

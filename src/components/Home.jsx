@@ -17,14 +17,14 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <div className='text-center mt-20'>
-        <h1 className='text-5xl rancho-font font-bold'>Our Popular Products</h1>
-        <Link className='btn bg-[#E3B577] text-[#331A15] rancho-font mt-7 items-center text-xl hover:bg-white hover:border-[#E3B577]' to='/add-coffee'>Add Coffee <GiCoffeeCup className='text-2xl' /></Link>
+        <h1 className='text-3xl md:text-5xl rancho-font font-bold'>Our Popular Products</h1>
+        <Link className='btn bg-[#E3B577] text-[#331A15] rancho-font mt-7 items-center md:text-xl hover:bg-white hover:border-[#E3B577]' to='/add-coffee'>Add Coffee <GiCoffeeCup className='md:text-2xl' /></Link>
       </div>
       <div className='absolute'>
         <img className='w-1/5' src={coffeeCup} alt="" />
         <img className='w-1/5 ml-[1217px]' src={coffeeStore} alt="" />
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-10 my-20 max-w-6xl mx-auto'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-10 my-20 md:max-w-6xl md:mx-auto mx-6'>
             {
               coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee} coffees={coffees} setCoffees={setCoffees}></CoffeeCard>)  
             }

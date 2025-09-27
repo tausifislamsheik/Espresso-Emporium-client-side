@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     children:[
       {
         index:true,
-        loader:() => fetch('https://espresso-emporium-server-side-ten.vercel.app/coffees'),
+        loader:() => fetch('https://espresso-emporium-server-side-i25n.vercel.app/coffees'),
         Component:Home
       },
       {
@@ -32,12 +32,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/coffee-details/:id',
-        loader:({params}) => fetch(`https://espresso-emporium-server-side-ten.vercel.app/coffees/${params.id}`),
+        loader:({params}) => fetch(`https://espresso-emporium-server-side-i25n.vercel.app/coffees/${params.id}`),
         Component:CoffeeDetails
       },
       {
         path:'/update-coffee/:id',
-        loader:({params}) => fetch(`https://espresso-emporium-server-side-ten.vercel.app/coffees/${params.id}`),
+        loader:({params}) => fetch(`https://espresso-emporium-server-side-i25n.vercel.app/coffees/${params.id}`),
         Component:UpdateCoffee
       },
       {
@@ -50,12 +50,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/users-profile',
-        loader:() => fetch('https://espresso-emporium-server-side-ten.vercel.app/users-profile'),
+        loader:() => fetch('https://espresso-emporium-server-side-i25n.vercel.app/users-profile'),
         Component:UsersProfile
       },
       {
         path:'/update-user/:id',
-        loader:({params}) => fetch(`https://espresso-emporium-server-side-ten.vercel.app/users-profile/${params.id}`),
+        loader:({params}) => fetch(`https://espresso-emporium-server-side-i25n.vercel.app/users-profile/${params.id}`),
         Component:UpdateUser
       }
     ]
