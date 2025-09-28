@@ -23,7 +23,7 @@ const UsersProfile = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `http://localhost:3000/users-profile/${id}`,
+          `https://espresso-emporium-server-side-i25n.vercel.app/users-profile/${id}`,
           {
             method: "DELETE",
           }

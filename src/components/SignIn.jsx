@@ -1,10 +1,11 @@
 import { use } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Auth/AuthProvider";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const SignIn = () => {
   const { signInUser } = use(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -16,13 +17,13 @@ const SignIn = () => {
 
     signInUser(email, password)
       .then((result) => {
-        
         e.target.reset();
+        navigate('/');
         const signInUser = {
           email,
           lastSignInTime: result.user?.metadata?.lastSignInTime,
         };
-        fetch("http://localhost:3000/users-profile", {
+        fetch("https://espresso-emporium-server-side-i25n.vercel.app/users-profile", {
           method: "PATCH",
           headers: {
             "content-type": "application/json",

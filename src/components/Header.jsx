@@ -60,41 +60,33 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-32 p-4 shadow rancho-font space-y-2 "
+              className="menu menu-sm dropdown-content rounded-box z-1 w-32 p-4 shadow rancho-font space-y-2 "
             >
               {user ? (
-                <div className="flex items-center gap-3">
-                  <div className="dropdown dropdown-bottom dropdown-center">
-                    <div tabIndex={0} role="button" className="btn m-1">
-                      {user?.displayName}
-                      Tausif
-                    </div>
-                    <ul
-                      tabIndex={0}
-                      className="dropdown-content menu bg-base-100 rounded-box z-1 p-5 shadow-sm space-y-2"
-                    >
-                      <p className="text-lg font-semibold">{user?.email}</p>
-                      <Link
-                        to="/users-profile"
-                        className="btn bg-[#331A15] text-white md:text-lg"
-                      >
-                        Users
-                      </Link>
-                      <Link
-                        onClick={handleLogout}
-                        className="btn border hover:border-red-600 hover:bg-white bg-red-600 text-white hover:text-red-600 text-lg"
-                      >
-                        Log-out
-                      </Link>
-                    </ul>
-                  </div>
-                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu bg-base-100 rounded-box z-1 p-5 shadow-sm space-y-2"
+                >
+                  <p className="text-lg font-semibold">{user?.email}</p>
+                  <Link
+                    to="/users-profile"
+                    className="btn bg-[#331A15] text-white md:text-lg"
+                  >
+                    Users
+                  </Link>
+                  <Link
+                    onClick={handleLogout}
+                    className="btn border hover:border-red-600 hover:bg-white bg-red-600 text-white hover:text-red-600 text-lg"
+                  >
+                    Log-out
+                  </Link>
+                </ul>
               ) : (
-                <div>
-                  <Link to="/signIn" className="btn md:text-xl">
+                <div className="bg-base-100 p-4">
+                  <Link to="/signIn" className="btn bg-[#331A15] text-white md:text-xl">
                     SignIn
                   </Link>
-                  <Link to="/signUp" className="btn md:text-xl">
+                  <Link to="/signUp" className="btn bg-[#331A15] text-white md:text-xl">
                     SignUp
                   </Link>
                 </div>
@@ -106,9 +98,8 @@ const Header = () => {
               {user ? (
                 <div className="flex items-center gap-3">
                   <div className="dropdown dropdown-bottom dropdown-center">
-                    <div tabIndex={0} role="button" className="btn m-1">
-                      {user?.displayName}
-                      Tausif
+                    <div tabIndex={0} role="button" className="btn md:text-xl">
+                      {user?.email}
                     </div>
                     <ul
                       tabIndex={0}

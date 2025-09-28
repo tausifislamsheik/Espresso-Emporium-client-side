@@ -14,6 +14,7 @@ const SignUp = () => {
     const form = e.target;
     const formData = new FormData(form);
     const { email, password, name, ...rest } = Object.fromEntries(formData.entries());
+    console.log(name)
 
     createUser(email, password)
       .then((result) => {
@@ -36,7 +37,7 @@ const SignUp = () => {
           lastSignInTime: result.user?.metadata?.lastSignInTime,
         };
 
-        fetch("http://localhost:3000/users-profile", {
+        fetch("https://espresso-emporium-server-side-i25n.vercel.app/users-profile", {
           method: "POST",
           headers: {
             "content-type": "application/json",
