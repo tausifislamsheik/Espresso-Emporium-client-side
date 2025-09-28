@@ -1,23 +1,26 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Auth/AuthProvider";
 import { use } from "react";
 import Swal from "sweetalert2";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const SignUp = () => {
-  const { createUser } = use(AuthContext);
+  const { createUser, userProfileUpdate } = use(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignUp = (e) => {
     e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
-    const { email, password, ...rest } = Object.fromEntries(formData.entries());
+    const { email, password, name, ...rest } = Object.fromEntries(formData.entries());
 
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
         e.target.reset();
+         navigate('/');
+        userProfileUpdate({displayName:name})
         Swal.fire({
           position: "center",
           icon: "success",
@@ -33,7 +36,7 @@ const SignUp = () => {
           lastSignInTime: result.user?.metadata?.lastSignInTime,
         };
 
-        fetch("https://espresso-emporium-server-side-i25n.vercel.app/users-profile", {
+        fetch("http://localhost:3000/users-profile", {
           method: "POST",
           headers: {
             "content-type": "application/json",

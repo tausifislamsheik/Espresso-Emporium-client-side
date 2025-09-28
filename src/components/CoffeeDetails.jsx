@@ -33,7 +33,7 @@ const CoffeeDetails = () => {
           </p>
           <p className="font-semibold">
             Details:{" "}
-            <span className="text-[#5C5B5B] font-light">{details.slice(0,30)}</span>
+            <span className="text-[#5C5B5B] font-light">{details}</span>
           </p>
           
         </div>

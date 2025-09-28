@@ -16,7 +16,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <div className='text-center mt-20'>
-        <h1 className='text-3xl md:text-5xl rancho-font font-bold'>Our Popular Products</h1>
+        <h1 className='text-3xl md:text-5xl rancho-font font-bold mb-5'>Our Popular Products</h1>
         <Link className='btn bg-[#E3B577] text-[#331A15] rancho-font mt-7 items-center md:text-xl hover:bg-white hover:border-[#E3B577]' to='/add-coffee'>Add Coffee <GiCoffeeCup className='md:text-2xl' /></Link>
       </div>
       <div className='absolute'>

@@ -1,7 +1,26 @@
+import { useContext } from "react";
 import logo from "../assets/images/more/logo1.png";
 import { Link } from "react-router";
+import { AuthContext } from "../Auth/AuthProvider";
+import Swal from "sweetalert2";
 
 const Header = () => {
+  const { user, logoutUser } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logoutUser()
+      .then(() => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "User logout successfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      })
+      .catch((error) => console.log(error.message));
+  };
+
   return (
     <div className="relative">
       <div
@@ -43,31 +62,87 @@ const Header = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-32 p-4 shadow rancho-font space-y-2 "
             >
-                <Link to="/signIn" className="btn bg-[#331A15] text-white md:text-xl">
-                  SignIn
-                </Link>
-                <Link to="/signUp" className="btn bg-[#331A15] text-white md:text-xl">
-                  SignUp
-                </Link>
+              {user ? (
+                <div className="flex items-center gap-3">
+                  <div className="dropdown dropdown-bottom dropdown-center">
+                    <div tabIndex={0} role="button" className="btn m-1">
+                      {user?.displayName}
+                      Tausif
+                    </div>
+                    <ul
+                      tabIndex={0}
+                      className="dropdown-content menu bg-base-100 rounded-box z-1 p-5 shadow-sm space-y-2"
+                    >
+                      <p className="text-lg font-semibold">{user?.email}</p>
+                      <Link
+                        to="/users-profile"
+                        className="btn bg-[#331A15] text-white md:text-lg"
+                      >
+                        Users
+                      </Link>
+                      <Link
+                        onClick={handleLogout}
+                        className="btn border hover:border-red-600 hover:bg-white bg-red-600 text-white hover:text-red-600 text-lg"
+                      >
+                        Log-out
+                      </Link>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <Link to="/signIn" className="btn md:text-xl">
+                    SignIn
+                  </Link>
+                  <Link to="/signUp" className="btn md:text-xl">
+                    SignUp
+                  </Link>
+                </div>
+              )}
             </ul>
           </div>
-
-
-
-         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 rancho-font">
-            <Link to="/signIn" className="btn mr-3 md:text-xl">
-              SignIn
-            </Link>
-            <Link to="/signUp" className="btn md:text-xl">
-              SignUp
-            </Link>
-          </ul>
-         </div>
-
-           
+          <div className="navbar-center hidden lg:flex">
+            <ul className="menu menu-horizontal px-1 rancho-font">
+              {user ? (
+                <div className="flex items-center gap-3">
+                  <div className="dropdown dropdown-bottom dropdown-center">
+                    <div tabIndex={0} role="button" className="btn m-1">
+                      {user?.displayName}
+                      Tausif
+                    </div>
+                    <ul
+                      tabIndex={0}
+                      className="dropdown-content menu bg-base-100 rounded-box z-1 p-5 shadow-sm space-y-2"
+                    >
+                      <p className="text-lg font-semibold">{user?.email}</p>
+                      <Link
+                        to="/users-profile"
+                        className="btn bg-[#331A15] text-white md:text-lg"
+                      >
+                        Users
+                      </Link>
+                      <Link
+                        onClick={handleLogout}
+                        className="btn border hover:border-red-600 hover:bg-white bg-red-600 text-white hover:text-red-600 text-lg"
+                      >
+                        Log-out
+                      </Link>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-x-3">
+                  <Link to="/signIn" className="btn md:text-xl">
+                    SignIn
+                  </Link>
+                  <Link to="/signUp" className="btn md:text-xl">
+                    SignUp
+                  </Link>
+                </div>
+              )}
+            </ul>
+          </div>
         </div>
-        
       </div>
     </div>
   );

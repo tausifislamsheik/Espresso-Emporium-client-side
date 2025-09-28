@@ -22,7 +22,7 @@ const SignIn = () => {
           email,
           lastSignInTime: result.user?.metadata?.lastSignInTime,
         };
-        fetch("https://espresso-emporium-server-side-i25n.vercel.app/users-profile", {
+        fetch("http://localhost:3000/users-profile", {
           method: "PATCH",
           headers: {
             "content-type": "application/json",

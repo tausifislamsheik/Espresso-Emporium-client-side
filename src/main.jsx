@@ -14,6 +14,7 @@ import AuthProvider from './Auth/AuthProvider';
 import UsersProfile from './components/UsersProfile';
 import UpdateUser from './components/UpdateUser';
 import ErrorPage from './components/ErrorPage';
+import PrivateRoute from './Route/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
     children:[
       {
         index:true,
-        loader:() => fetch('https://espresso-emporium-server-side-i25n.vercel.app/coffees'),
+        loader:() => fetch('http://localhost:3000/coffees'),
         Component:Home
       },
       {
@@ -32,12 +33,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/coffee-details/:id',
-        loader:({params}) => fetch(`https://espresso-emporium-server-side-i25n.vercel.app/coffees/${params.id}`),
+        loader:({params}) => fetch(`http://localhost:3000/coffees/${params.id}`),
         Component:CoffeeDetails
       },
       {
         path:'/update-coffee/:id',
-        loader:({params}) => fetch(`https://espresso-emporium-server-side-i25n.vercel.app/coffees/${params.id}`),
+        loader:({params}) => fetch(`http://localhost:3000/coffees/${params.id}`),
         Component:UpdateCoffee
       },
       {
@@ -50,12 +51,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/users-profile',
-        loader:() => fetch('https://espresso-emporium-server-side-i25n.vercel.app/users-profile'),
-        Component:UsersProfile
+        loader:() => fetch('http://localhost:3000/users-profile'),
+        element:<PrivateRoute><UsersProfile></UsersProfile></PrivateRoute>
       },
       {
         path:'/update-user/:id',
-        loader:({params}) => fetch(`https://espresso-emporium-server-side-i25n.vercel.app/users-profile/${params.id}`),
+        loader:({params}) => fetch(`http://localhost:3000/users-profile/${params.id}`),
         Component:UpdateUser
       }
     ]

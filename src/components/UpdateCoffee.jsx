@@ -12,7 +12,7 @@ const UpdateCoffee = () => {
     const formData = new FormData(form);
     const updatedCoffee = Object.fromEntries(formData.entries());
 
-    fetch(`https://espresso-emporium-server-side-i25n.vercel.app/coffees/${_id}`, {
+    fetch(`http://localhost:3000/coffees/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -36,7 +36,7 @@ const UpdateCoffee = () => {
     <div className="md:max-w-7xl md:mx-auto mx-6">
     <Link className="rancho-font flex items-center text-xl font-bold gap-3 my-7" to='/'><FaArrowLeftLong /> Back To Home</Link>
     
-    <div className="bg-[#F4F3F0] p-5 md:p-20 mb-20">
+    <div className="bg-[#F4F3F0] p-5 md:p-20 mb-20 max-w-3xl mx-auto">
       <div className="mb-10 max-w-3xl mx-auto space-y-5 text-center">
         <h1 className="rancho-font text-2xl md:text-4xl  font-semibold">
           Update Existing Coffee Details
