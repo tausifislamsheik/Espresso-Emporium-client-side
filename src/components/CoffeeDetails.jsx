@@ -10,7 +10,7 @@ const CoffeeDetails = () => {
     <div className="card card-side md:max-w-2xl md:mx-auto mx-6 justify-around p-10 shadow-sm my-20 bg-[#F4F3F0] flex-col">
       <figure>
         <img
-        className="w-40 md:w-60"
+        className="w-40 md:w-60 bg-white px-7 rounded-xl"
           src={photo}
           alt="Coffee"
         />
